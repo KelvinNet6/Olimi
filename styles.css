@@ -1,37 +1,38 @@
 /* Reset & Base Styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Open Sans', sans-serif; color: #333; line-height: 1.6; }
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  color: #333;
-  background: #fff;
-  line-height: 1.6;
-}
-
-/* Fonts */
-h1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 3rem;
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #0D1B2A; /* Deep blue */
   color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
-h1 span {
-  color: #FFD700; /* Gold accent */
-}
-
-h2 {
+.navbar .logo {
   font-family: 'Great Vibes', cursive;
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  color: #0D1B2A; /* Deep blue */
+  font-size: 2rem;
 }
 
-p {
-  font-size: 1.1rem;
+.navbar nav a {
+  color: #fff;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar nav a i {
+  margin-right: 0.3rem;
+}
+
+.navbar nav a:hover {
+  color: #FFD700; /* Gold */
 }
 
 /* Hero Section */
@@ -53,54 +54,125 @@ p {
   padding: 0 1rem;
 }
 
-.cta-buttons {
-  margin-top: 2rem;
+.hero h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
 }
 
+.hero h1 span {
+  color: #FFD700;
+}
+
+.cta-buttons { margin-top: 2rem; }
 .btn {
   display: inline-block;
-  background: #FFD700; /* Gold */
+  background: #FFD700;
   color: #0D1B2A;
   padding: 0.75rem 1.5rem;
-  margin: 0 0.5rem;
+  margin: 0.5rem;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
   transition: background 0.3s;
 }
 
-.btn:hover {
-  background: #e6c200;
+.btn:hover { background: #e6c200; }
+.btn.secondary { background: #fff; color: #0D1B2A; }
+.btn.secondary:hover { background: #f0f0f0; }
+
+/* About Section */
+.about {
+  padding: 4rem 1rem;
+  background: #F5F5DC;
 }
 
-.btn.secondary {
-  background: #ffffff;
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.about-container img {
+  flex: 1 1 400px;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.about-text {
+  flex: 1 1 500px;
+  padding: 2rem;
+}
+
+.about-text h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+}
+
+/* Pathways Section */
+.pathways {
+  padding: 4rem 1rem;
+  text-align: center;
+  background: #fff;
+}
+
+.pathways h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #F5F5DC;
+  padding: 2rem;
+  border-radius: 12px;
+  flex: 1 1 250px;
+  max-width: 300px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin-bottom: 1rem;
   color: #0D1B2A;
 }
 
-.btn.secondary:hover {
-  background: #f0f0f0;
-}
-
-/* Intro Section */
-.intro {
-  padding: 4rem 1rem;
-  background: #F5F5DC; /* Earth tone beige */
+/* Footer */
+footer {
+  background: #0D1B2A;
+  color: #fff;
   text-align: center;
+  padding: 2rem 1rem;
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
+footer .socials a {
+  color: #FFD700;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+footer .socials a:hover {
+  color: #fff;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-  .btn {
-    display: block;
-    margin: 0.5rem auto;
-  }
+  .about-container { flex-direction: column; }
+  .cards { flex-direction: column; }
+  .navbar nav a { display: inline-block; margin: 0.5rem; }
+  .hero h1 { font-size: 2.5rem; }
 }
+
