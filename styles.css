@@ -1,0 +1,106 @@
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  background: #fff;
+  line-height: 1.6;
+}
+
+/* Fonts */
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #fff;
+}
+
+h1 span {
+  color: #FFD700; /* Gold accent */
+}
+
+h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #0D1B2A; /* Deep blue */
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://source.unsplash.com/1600x900/?sunrise,mountains') center/cover no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+.hero .overlay {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.cta-buttons {
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #FFD700; /* Gold */
+  color: #0D1B2A;
+  padding: 0.75rem 1.5rem;
+  margin: 0 0.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #e6c200;
+}
+
+.btn.secondary {
+  background: #ffffff;
+  color: #0D1B2A;
+}
+
+.btn.secondary:hover {
+  background: #f0f0f0;
+}
+
+/* Intro Section */
+.intro {
+  padding: 4rem 1rem;
+  background: #F5F5DC; /* Earth tone beige */
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .btn {
+    display: block;
+    margin: 0.5rem auto;
+  }
+}
