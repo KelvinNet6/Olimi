@@ -5,12 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Olimi - Welcome</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- Google Fonts for script + sans serif -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Icons CDN -->
+  <script src="https://kit.fontawesome.com/a2e0e6a680.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Olimi</div>
+    <nav>
+      <a href="#home"><i class="fas fa-home"></i> Home</a>
+      <a href="#journey"><i class="fas fa-leaf"></i> Your Journey</a>
+      <a href="#pathways"><i class="fas fa-sun"></i> Pathways</a>
+      <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+  </header>
+
   <!-- Hero Banner -->
-  <section class="hero">
+  <section class="hero" id="home">
     <div class="overlay">
       <h1>Welcome to <span>Olimi</span></h1>
       <p>Healing · Peace · Love · Freedom</p>
@@ -22,15 +36,46 @@
     </div>
   </section>
 
-  <!-- Intro Section -->
-  <section class="intro">
-    <div class="container">
-      <h2>Our Mission</h2>
-      <p>
-        At Olimi, we guide you on a path to inner healing, spiritual alignment,
-        abundant freedom, and a life filled with love and peace.
-      </p>
+  <!-- About Section: Image Left, Text Right -->
+  <section class="about" id="journey">
+    <div class="about-container">
+      <img src="https://source.unsplash.com/600x400/?meditation,nature" alt="Meditation Nature">
+      <div class="about-text">
+        <h2>Your Journey with Olimi</h2>
+        <p>Discover the meaning of "Olimi" — a sacred path to inner peace, spiritual growth, and true freedom. Our story is rooted in love, alignment, and healing for all.</p>
+      </div>
     </div>
   </section>
+
+  <!-- Pathways Section: Three Containers -->
+  <section class="pathways" id="pathways">
+    <h2>Pathways to Shine</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Self-Healing</h3>
+        <p>21-Day Inner Healing Journey with kindness, peace, and self-love rituals.</p>
+      </div>
+      <div class="card">
+        <h3>Spiritual Alignment</h3>
+        <p>Meditations, vision alignment, and energy clearing to stay in divine flow.</p>
+      </div>
+      <div class="card">
+        <h3>Financial Freedom</h3>
+        <p>Mindset shifts, budgeting, and wealth-building for abundant living.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Olimi | Healing · Peace · Love · Freedom</p>
+    <div class="socials">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
 </body>
 </html>
+
