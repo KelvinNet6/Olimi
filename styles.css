@@ -37,8 +37,8 @@ body { font-family: 'Open Sans', sans-serif; color: #333; line-height: 1.6; }
 
 /* Hero Section */
 .hero {
-  background: url('https://source.unsplash.com/1600x900/?sunrise,mountains') center/cover no-repeat;
-  height: 50vh;
+  background: url('Olimi.png') center/cover no-repeat;
+  height: 100vh;
   position: relative;
 }
 
