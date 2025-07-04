@@ -2,103 +2,125 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Olimi Arise & Shine</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://kit.fontawesome.com/a2e0e6a680.js" crossorigin="anonymous"></script>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; color:#333; background:#fff; }
+    header { background:#111; color:#fff; padding:20px 40px; display:flex; justify-content:space-between; align-items:center; }
+    header nav a { color:#fff; text-decoration:none; margin-left:20px; font-size:14px; }
+    .hero { background:url('https://source.unsplash.com/1600x900/?sunrise,mountains') center/cover no-repeat; height:70vh; display:flex; justify-content:center; align-items:center; flex-direction:column; text-align:center; }
+    .hero h1 { color:#fff; font-size:48px; margin-bottom:10px; }
+    .hero p { color:#fff; font-size:18px; margin-bottom:20px; }
+    .hero button { margin:5px; padding:10px 20px; background:#fff; border:none; cursor:pointer; }
+    .section { display:flex; align-items:center; flex-wrap:wrap; padding:60px 40px; }
+    .section:nth-child(even) { flex-direction: row-reverse; }
+    .section img { flex:1; max-width:45%; border-radius:8px; }
+    .section .content { flex:1; min-width:300px; padding:20px; }
+    .section h2 { font-size:26px; margin-bottom:20px; }
+    .section p { font-size:16px; line-height:1.6; }
+    .faq h2 { margin-bottom:30px; font-size:20px; }
+    .accordion-item { margin-bottom:10px; }
+    .accordion-item input { display:none; }
+    .accordion-item label { display:block; background:#eee; padding:15px; cursor:pointer; position:relative; }
+    .accordion-item label::after { content: ' +'; position:absolute; right:20px; font-weight:bold; }
+    .accordion-item input:checked + label::after { content: ' −'; }
+    .accordion-item .answer { max-height:0; overflow:hidden; transition:0.3s; background:#f9f9f9; padding:0 15px; }
+    .accordion-item input:checked ~ .answer { max-height:200px; padding:15px; }
+    footer { background:#333; color:#fff; text-align:center; padding:40px 20px; }
+    footer p { margin:5px 0; }
+  </style>
 </head>
 <body>
-
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">Arise & Shine</div>
+  <header>
+    <div class="logo">OLIMI ARISE & SHINE</div>
     <nav>
-      <a href="#works">home</a>
-      <a href="#faq"></a>
-      <a href="#contact">Контакты</a>
+      <a href="#home">Home</a>
+      <a href="#journey">Your Journey</a>
+      <a href="#programs">Pathways</a>
+      <a href="#coaching">Book</a>
+      <a href="#community">Community</a>
+      <a href="#shop">Shop</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
-
-  <!-- Hero Banner -->
-  <section class="hero">
-    <div class="overlay">
-      <h1>MEBELEVV</h1>
+  <section class="hero" id="home">
+    <h1>Welcome to Olimi</h1>
+    <p>Healing • Peace • Love • Freedom</p>
+    <button>Start Your Journey</button>
+    <button>Book a Session</button>
+    <button>Download Free Guide</button>
+  </section>
+  <section class="section" id="journey">
+    <img src="https://source.unsplash.com/600x400/?spiritual,journey" alt="Your Journey">
+    <div class="content">
+      <h2>Your Journey (About Olimi)</h2>
+      <p>Olimi means rising light. Our journey is about healing, coaching, and spirituality. Our core values are Peace, Alignment, Growth, Love, and Freedom.</p>
     </div>
   </section>
-
-  <!-- Our Works -->
-  <section class="works" id="works">
-    <h2>НАШИ РАБОТЫ</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="Olimi.png" alt="Bedroom">
-        <p>Спальня</p>
-      </div>
-      <div class="card">
-        <img src="Olimi.png" alt="Coffee Table">
-        <p>Чайный столик</p>
-      </div>
-      <div class="card">
-        <img src="Olimi.png" alt="Sofa">
-        <p>Диван</p>
-      </div>
+  <section class="section" id="programs">
+    <img src="https://source.unsplash.com/600x400/?healing,meditation" alt="Pathways">
+    <div class="content">
+      <h2>Pathways to Shine</h2>
+      <p>We offer Self-Healing, Spiritual Alignment, Financial Freedom, Marriage & Relationships, and Personal Peace. Each path includes a free PDF, full workbook, and coaching add-on.</p>
     </div>
   </section>
-
-  <!-- CTA Section -->
-  <section class="cta">
-    <div class="cta-text">
-      <h3>Ответьте на 5 вопросов и узнайте стоимость</h3>
-      <p>Мы поможем вам рассчитать стоимость мебели вашей мечты...</p>
-      <button>Узнать стоимость</button>
-    </div>
-    <div class="cta-image">
-      <img src="Olimi.png" alt="Dining">
+  <section class="section" id="coaching">
+    <img src="https://source.unsplash.com/600x400/?coaching,session" alt="Coaching">
+    <div class="content">
+      <h2>Book a Session</h2>
+      <p>We offer 1:1 or group coaching: healing, financial clarity, couples healing, spiritual clarity. Packages: single, 3-session bundle, or monthly mentorship.</p>
     </div>
   </section>
-
-  <!-- FAQ Section -->
-  <section class="faq" id="faq">
-    <h2>ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
-    <div class="accordion">
-      <div class="accordion-item">
-        <input type="checkbox" id="q1">
-        <label for="q1">Сколько времени занимает изготовление мебели?</label>
-        <div class="answer">
-          <p>Сроки зависят от сложности и объема заказа...</p>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <input type="checkbox" id="q2">
-        <label for="q2">Есть ли у вас рассрочка или кредит?</label>
-        <div class="answer">
-          <p>Да, возможно оформление...</p>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <input type="checkbox" id="q3">
-        <label for="q3">Какой срок гарантии?</label>
-        <div class="answer">
-          <p>Гарантия 12 месяцев...</p>
-        </div>
-      </div>
+  <section class="section" id="community">
+    <img src="https://source.unsplash.com/600x400/?community,group" alt="Community">
+    <div class="content">
+      <h2>Join the Community</h2>
+      <p>Join our tribe: WhatsApp/Facebook group, weekly Zoom check-ins, daily affirmations, and healing prompts.</p>
     </div>
   </section>
-
-  <!-- Footer -->
-  <footer id="contact">
-    <div class="footer-content">
-      <div class="contact-info">
-        <p>Связь: 8 (800) 555-35-35</p>
-        <p>Email: mebelevv@mail.ru</p>
-        <p>Адрес: Москва, улица Долг.</p>
-      </div>
-      <div class="map-placeholder">
-        <img src="Olimi.png" alt="Map">
-      </div>
+  <section class="section" id="shop">
+    <img src="https://source.unsplash.com/600x400/?shop,spiritual" alt="Shop">
+    <div class="content">
+      <h2>Sacred Shop</h2>
+      <p>PDF workbooks, audio meditations, mugs, T-shirts ("Arise & Shine", "Healed Woman"), and gratitude journals.</p>
     </div>
-    <p>© 2024 MEBELEVV</p>
+  </section>
+  <section class="section" id="blog">
+    <img src="https://source.unsplash.com/600x400/?blog,writing" alt="Shine Journal">
+    <div class="content">
+      <h2>Shine Journal</h2>
+      <p>Categories: Healing & Forgiveness, Spiritual Awakening, Financial Peace, Relationship Wholeness, Daily Gratitude.</p>
+    </div>
+  </section>
+  <section class="faq" id="contact">
+    <h2>Contact & Prayer Requests</h2>
+    <div class="accordion-item">
+      <input type="checkbox" id="q1" onclick="closeOthers(this)">
+      <label for="q1">Contact Form</label>
+      <div class="answer"><p>Send us your details and we will reach out.</p></div>
+    </div>
+    <div class="accordion-item">
+      <input type="checkbox" id="q2" onclick="closeOthers(this)">
+      <label for="q2">Book a Discovery Call</label>
+      <div class="answer"><p>Book a free discovery session to explore your path.</p></div>
+    </div>
+    <div class="accordion-item">
+      <input type="checkbox" id="q3" onclick="closeOthers(this)">
+      <label for="q3">Submit a Prayer Request</label>
+      <div class="answer"><p>Submit your prayer or healing request and we will hold space for you.</p></div>
+    </div>
+  </section>
+  <footer>
+    <p>© 2024 Olimi Arise & Shine</p>
   </footer>
-
+  <script>
+    function closeOthers(current) {
+      document.querySelectorAll('.faq input[type="checkbox"]').forEach(box => {
+        if (box !== current) box.checked = false;
+      });
+    }
+  </script>
 </body>
 </html>
+
