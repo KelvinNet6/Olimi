@@ -11,7 +11,8 @@
     .hero { background:url('AriseandShine.png') center/cover no-repeat; height:90vh; display:flex; justify-content:center; align-items:center; flex-direction:column; text-align:center; }
     .hero h1 { color:#fff; font-size:48px; margin-bottom:10px; }
     .hero p { color:#fff; font-size:18px; margin-bottom:20px; }
-    .hero button { margin:5px; padding:10px 20px; background:#fff; border:none; cursor:pointer; }
+     .hero .button-group { display:flex; gap:10px; }
+    .hero button { padding:10px 20px; background:#fff; border:none; cursor:pointer; border-radius:25px; }
     .section { display:flex; align-items:center; flex-wrap:wrap; padding:60px 40px; }
     .section:nth-child(even) { flex-direction: row-reverse; }
     .section img { flex:1; max-width:45%; border-radius:8px; }
@@ -45,9 +46,11 @@
     </nav>
   </header>
   <section class="hero" id="home">
-    <button>Start Your Journey</button>
-    <button>Book a Session</button>
-    <button>Download Free Guide</button>
+     <div class="button-group">
+      <button>Start Your Journey</button>
+      <button>Book a Session</button>
+      <button>Download Free Guide</button>
+    </div>
   </section>
   <section class="section" id="journey">
     <img src="https://source.unsplash.com/600x400/?spiritual,journey" alt="Your Journey">
