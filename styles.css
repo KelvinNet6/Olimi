@@ -1,4 +1,28 @@
- /* Tablet Styles */
+body { margin:0; font-family: Arial, sans-serif; color:#333; background:#fff; }
+    header { background:#111; color:#fff; padding:20px 40px; display:flex; justify-content:space-between; align-items:center; }
+    header nav a { color:#fff; text-decoration:none; margin-left:20px; font-size:14px; }
+    .hero { background:url('AriseandShine.png') center/cover no-repeat; height:90vh; display:flex; justify-content:center; align-items:center; flex-direction:column; text-align:center; }
+    .hero h1 { color:#fff; font-size:48px; margin-bottom:10px; }
+    .hero p { color:#fff; font-size:18px; margin-bottom:20px; }
+     .hero .button-group { display:flex; gap:10px; margin-top: 250px}
+    .hero button { padding:10px 20px; background:#fff; border:none; cursor:pointer; border-radius:25px; }
+    .section { display:flex; align-items:center; flex-wrap:wrap; padding:60px 40px; }
+    .section:nth-child(even) { flex-direction: row-reverse; }
+    .section img { flex:1; max-width:45%; border-radius:8px; }
+    .section .content { flex:1; min-width:300px; padding:20px; }
+    .section h2 { font-size:26px; margin-bottom:20px; }
+    .section p { font-size:16px; line-height:1.6; }
+    .faq h2 { margin-bottom:30px; font-size:20px; }
+    .accordion-item { margin-bottom:10px; }
+    .accordion-item input { display:none; }
+    .accordion-item label { display:block; background:#eee; padding:15px; cursor:pointer; position:relative; }
+    .accordion-item label::after { content: ' +'; position:absolute; right:20px; font-weight:bold; }
+    .accordion-item input:checked + label::after { content: ' −'; }
+    .accordion-item .answer { max-height:0; overflow:hidden; transition:0.3s; background:#f9f9f9; padding:0 15px; }
+    .accordion-item input:checked ~ .answer { max-height:200px; padding:15px; }
+    footer { background:#333; color:#fff; text-align:center; padding:40px 20px; }
+    footer p { margin:5px 0; }
+/* Tablet Styles */
   @media (max-width: 1024px) {
     header { flex-direction: column; align-items: flex-start; }
     header nav a { margin: 5px 10px 5px 0; }
